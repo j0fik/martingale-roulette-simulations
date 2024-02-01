@@ -1,9 +1,9 @@
-**Roulette-simulations**
+**Martingale roulette strategy - simulation**
 ========================
-This code provides simulation of succes rate (and more data) of a roulette *strategy* I heard of once.
+This code provides simulation of succes rate (and more data) of a Martingale roulette *strategy* I heard of once.
 Using various parameters such as *starting budget*, *number of simulations (sample size)*, *color (red or black)* and *desired return* to compute the succes rate with the highiest possible precision.
 
-*Strategy*
+*Martingale Strategy*
 ----------
 Strategy is pretty simple. We choose a color we want to bet on. Either black or red (green is forbidden), we bet every round on the same color. Probability of succes is 48.65% per round.  
 
