@@ -1,7 +1,7 @@
 **Roulette-simulations**
 ========================
-This code provides simulation of succes rate (and more data) of a roulette strategy I heard of.
-Using various parameters such as *starting budget*, *number of simulations (sample)*, *color (red or black)* and *desired return* to compute the succes rate with the highiest possible precision.
+This code provides simulation of succes rate (and more data) of a roulette *strategy* I heard of once.
+Using various parameters such as *starting budget*, *number of simulations (sample size)*, *color (red or black)* and *desired return* to compute the succes rate with the highiest possible precision.
 
 *Strategy*
 ----------
@@ -28,9 +28,23 @@ We repeat this algorithm either until next bet is greater than our balance or un
 
 *About script*
 --------------
-####Disclaimer
+### Disclaimer  
 I'm not a professional programmer, I can write some code in python. Senior programmers' eyes may bleed.   
 **You have been warned**  
+___
+Whole code is just one big method with 4 parameters - *a, b, c, p*
+- ***a*** - budget *(balance)*  
+- ***b*** - sample size *(number of simulations)*  
+- ***c*** - to choose color  
+- ***p*** - desired return in % (0-100)
+
+The script will simulate ***b*** games of rullete using the *strategy*. **Game is over** when your bet amount would be greater than current balance **or** when you reach/exceed __(1 + p/100)*a__, which is initial balance plus desired return.  
+Parameter ***c*** actually don't play a role, because at infinite number of games is succes rate *(per round)* the same.  
+
+After ***b*** games script provide chosen data, which is *average number of rounds per game*, *average number of rounds achieving the goal/return (won game)*, *average number of rounds of failed game* and ***succes rate***.
+
+
+
 
 
 
