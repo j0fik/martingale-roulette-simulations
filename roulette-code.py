@@ -5,7 +5,7 @@ c = int(input("Color you want to bet on (1 for black; 2 for red): "))
 p = int(input("Expected return(%): "))
 print()
 def roulette(budget, reps, color, p):
-    ruleta = [0, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2,
+    roulette = [0, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2,
               1, 2]
     data = []
     return_x = 1 + p/100
@@ -30,13 +30,13 @@ def roulette(budget, reps, color, p):
                 budget = budget - bet
             old_bets.append(bet)
 
-            c = random.randint(0, len(ruleta) - 1)
-            if ruleta[c] == color:
+            c = random.randint(0, len(roulette) - 1)
+            if roulette[c] == color:
                 bet = 2 * bet
                 budget += bet
                 streak.append(1)
 
-            elif ruleta[c] != color:
+            elif roulette[c] != color:
                 streak.append(0)
             x = x + 1
         if old_bets:
@@ -57,9 +57,6 @@ round_info_l = 0
 no_w = 0
 no_l = 0
 for i in range(len(d)):
-    #print(f"Number of rounds: {d[i][0]}")
-    #print(f"Ending budget: {d[i][1]}")
-    #print(f"Highiest bet: {d[i][2]}")
     round_info += d[i][0]
     if d[i][3] == 1:
         round_info_w += d[i][0]
@@ -67,8 +64,8 @@ for i in range(len(d)):
     elif d[i][3] == 0:
         round_info_l += d[i][0]
         no_l += 1
-    #print()
-
+        
+#Presents chosen data about sample
 print(f"Average number of rounds per roulette game: {round_info/b}")
 print()
 if no_w != 0:
@@ -82,6 +79,6 @@ else:
 print(f"Succes rate: {(no_w/b)*100} %")
 print()
 
-
+#delete '#' to show matrix of chosen data per roulette game
 #for rows in d:
 #    print(rows)
