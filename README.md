@@ -41,7 +41,17 @@ Whole code is just one big method with 4 parameters - *a, b, c, p*
 The script will simulate ***b*** games of rullete using the *strategy*. **Game is over** when your bet amount would be greater than current balance **or** when you reach/exceed __(1 + p/100)*a__, which is initial balance plus desired return.  
 Parameter ***c*** actually don't play a role, because at infinite number of games is succes rate *(per round)* the same.  
 
-After ***b*** games script provide chosen data, which is *average number of rounds per game*, *average number of rounds achieving the goal/return (won game)*, *average number of rounds of failed game* and ***succes rate***.
+After ***b*** games script provide chosen data, which is *average number of rounds per game*, *average number of rounds achieving the goal/return (won game)*, *average number of rounds of failed game* and ***succes rate***.  
+Also script compute the net profit which is  
+```math
+\sum_{i=1}^b d[i][1] - a   
+```
+- ***b*** is sample size
+- ***d*** is matrix that store chosen values about ***i***-th game
+- ***d[i][1]*** is a balance after finished game
+- ***a*** is initial budget
+
+Script provides info about net profit at 100% succes rate; which is $`b*a*(\frac{p}{100}) `$.
 
 
 
