@@ -57,14 +57,17 @@ round_info_w = 0
 round_info_l = 0
 no_w = 0
 no_l = 0
+net_profit = 0
 for i in range(len(d)):
     round_info += d[i][0]
     if d[i][3] == 1:
         round_info_w += d[i][0]
         no_w += 1
+        net_profit += d[i][1] - a
     elif d[i][3] == 0:
         round_info_l += d[i][0]
         no_l += 1
+        net_profit += d[i][0] - a
         
 #Presents chosen data about sample
 print(f"Average number of rounds per roulette game: {round_info/b}")
@@ -79,6 +82,8 @@ else:
     print(f"Average number of rounds of failed games: 0")
 print(f"Succes rate: {(no_w/b)*100} %")
 print()
+print(f"Net profit: {net_profit}")
+print(f"Net profit at 100% succes rate: {b*a*(p/100)}")
 
 #delete '#' to show matrix of chosen data per roulette game
 #for rows in d:
