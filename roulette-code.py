@@ -83,6 +83,7 @@ else:
 print(f"Succes rate: {(no_w/b)*100} %")
 print()
 print(f"Net profit: {net_profit}")
+print(f"Net profit per game: {net_profit/b}")
 print(f"Net profit at 100% succes rate: {b*a*(p/100)}")
 
 #delete '#' to show matrix of chosen data per roulette game
