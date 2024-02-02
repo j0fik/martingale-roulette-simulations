@@ -14,8 +14,9 @@ def roulette(budget, reps, color, p):
         streak = []
         old_bets = []
         x = 0
-        condition = budget < return_x*old_budget
+        bet = 0
         budget = old_budget
+        condition = budget < return_x*old_budget
         while budget > 0 and condition:
             if x == 0:
                 bet = 1
