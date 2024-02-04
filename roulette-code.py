@@ -25,7 +25,7 @@ def roulette(budget, reps, color, p):
                     bet = 2 * old_bets[x - 1]
                 elif streak[x - 1] == 1:
                     bet = 1
-            if budget < bet or budget > return_x*old_budget:
+            if budget < bet or budget >= return_x*old_budget:
                 break
             else:
                 budget = budget - bet
