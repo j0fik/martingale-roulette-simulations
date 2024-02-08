@@ -2,7 +2,7 @@ import random
 a = int(input("Entry budget: "))
 b = int(input("Number of simulations: "))
 c = int(input("Color you want to bet on (1 for black; 2 for red): "))
-p = int(input("Expected return(%): "))
+p = float(input("Expected return(%): "))
 print()
 def roulette(budget, reps, color, p):
     roulette = [0, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2,
